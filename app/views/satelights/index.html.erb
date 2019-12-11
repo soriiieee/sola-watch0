@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Satelights</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name1</th>
+      <th>Name2</th>
+      <th>Name3</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @satelights.each do |satelight| %>
+      <tr>
+        <td><%= satelight.name1 %></td>
+        <td><%= satelight.name2 %></td>
+        <td><%= satelight.name3 %></td>
+        <td><%= link_to 'Show', satelight %></td>
+        <td><%= link_to 'Edit', edit_satelight_path(satelight) %></td>
+        <td><%= link_to 'Destroy', satelight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Satelight', new_satelight_path %>

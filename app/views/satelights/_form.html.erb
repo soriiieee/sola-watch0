@@ -1,0 +1,32 @@
+<%= form_with(model: satelight, local: true) do |form| %>
+  <% if satelight.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(satelight.errors.count, "error") %> prohibited this satelight from being saved:</h2>
+
+      <ul>
+      <% satelight.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name1 %>
+    <%= form.text_field :name1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name2 %>
+    <%= form.text_field :name2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name3 %>
+    <%= form.text_field :name3 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
