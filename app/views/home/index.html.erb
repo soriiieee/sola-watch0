@@ -1,2 +1,91 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<%# <%= stylesheet_link_tag "home/top"%> %>
+
+<body>
+  <div class="jumbotron text-center rounded-0 mb-0">
+    <div class="container p-5">
+    <h1 class="display-2 text-white"><strong class="text-bold">sky-watch0</strong></h1>
+    <h4 class="text-white"><strong class="text-bold">Photo & Information</strong></h4>
+    <p class="lead my-4 pb-1 text-white">毎日変わる空の様子を記録したり、閲覧したりするサイトです。カレンダーになっているので変化がわかります！</p>
+    <hr class="my-3">
+    <ul class="px-0 mt-5 p-5 justify-content-center">
+    <div class="space"></div>
+     <div class="d-flex align-items-center justify-content-center">
+      <i class="far fa-4x fa-arrow-alt-circle-down mr-2"></i>
+      <p class="lead py-4 mt-4 font-weight-bold text-white">早速はじめてみる</p>
+      <i class="far fa-4x fa-arrow-alt-circle-down ml-2"></i>
+     </div>
+    </ul>
+    </div>
+  </div>
+
+
+    <div class="d-flex align-items-center justify-content-center my-2 py-5">
+     <div class="">
+       <%# <%= image_tag("about/about_left.png",size: "100x100" ,class: "d-inline-block align-top py-0 mr-3") %>  %>
+     </div>
+     <div>
+        <h4 class="text-center font-weight-bold">「今日の空」地上からみるか？衛星からみるか？</h4>
+        <p class="my-0 py-0 font-weight-bold text-center">同じ空は２回としてありません。日々変わる空の情報&空の様子を記録します。</p>
+        <p class="my-0 py-0 font-weight-bold text-center">空に興味がある</p>
+     </div>
+      <div class="">
+        <%# <%= image_tag("about/about_right.png",size: "100x100" ,class: "d-inline-block align-top py-0 ml-3") %>  %>
+      </div>
+    </div>
+  <div class="row p-0 m-0">
+    <div class="about_image1 col-sm-6  p-0 m-0 w-100 text-center d-flex align-items-center justify-content-center">
+     <div class="bg-transparent text-center">空の雲が増えてる？</div>
+    </div>
+
+    <div class="about_image2 col-sm-6 p-0 m-0 w-100 text-center d-flex align-items-center justify-content-center">
+      <div class="bg-transparent text-white text-center">この時間の色だ</div>
+    </div>
+  </div>
+  <div class="row p-0 m-0">
+    <div class="about_image3 col-sm-6 p-0 m-0 w-100  text-center  d-flex align-items-center justify-content-center">
+      <div class="bg-transparent text-white text-center">空を宇宙から見ると</div>
+    </div>
+    <div class="about_image4 col-sm-6 p-0 m-0 w-100 text-center  d-flex align-items-center justify-content-center">
+      <div class="bg-transparent text-white text-center">衛星画像で何が見える？</div>
+    </div>
+  </div>
+  <h4 class="text-center font-weight-bold py-3">提供コンテンツ</h4>
+
+    <div class="container">
+      <div class="row d-flex align-items-center justify-content-center">
+        <div class="col-sm-4 text-center">
+          <%# <%= image_tag("about/about_right.png",size: "100x100" ,class: "d-inline-block border rounded-circle align-top py-0 mr-2") %> %>
+          <h6 class="my-4 font-weight-bold">@地上<a class="btn btn-sm ml-2 btn-outline-info" href="/skycalenders/index" role="button">Go Page ! &raquo;</a></h6>
+          <p>毎日の空日記を記録していきます。晴れの日も雨の日もその日1日の空の色を見ていきます。空みくじにも挑戦！</p>
+        </div>
+
+        <div class="col-sm-4 text-center">
+          <%# <%= image_tag("about/about_right.png",size: "100x100" ,class: "d-inline-block border rounded-circle align-top py-0 mr-2") %> %>
+          <h6 class="my-4 font-weight-bold">@衛星<a class="btn btn-sm ml-2 btn-outline-info" href="/satelights/index" role="button">Go Page ! &raquo;</a></h6>
+          <p>気象衛星ひまわり！地球を常に見守っている人工衛星からの写真を記録していきます</p>
+        </div>
+
+        <div class="col-sm-4 text-center">
+          <%# <%= image_tag("about/about_right.png",size: "100x100" ,class: "d-inline-block border rounded-circle align-top py-0 mr-2") %> %>
+          <h6 class="my-4 font-weight-bold">@空の中(天気図)<a class="btn btn-sm ml-2 btn-outline-info" href="/data" role="button">Go Page ! &raquo;</a></h6>
+          <p>天気の分析には中高層の分析が必須になってきます。ここでは、天気の写り代わりを見ていきます！</p>
+        </div>
+      </div>
+   </div>
+
+  <div class="jumbotron skycamera text-center rounded-0 mb-0">
+    <h1 class="display-4 font-weight-bold pt-3 mt-5 text-white"><strong class="text-bold">眺めてみよう！空のこと</strong></h1>
+  </div>
+    </div>
+        <div class="d-flex align-items-center justify-content-center py-5">
+     <div class="">
+       <%# <%= image_tag("about/about_left.png",size: "100x100" ,class: "d-inline-block align-top m-3") %>  %>
+     </div>
+     <div>
+        <h2 class="bold text-center font-weight-bold　pt-5">どんな人が作ったの？</h2>
+        <p class="my-0 py-0 font-weight-bold text-center">空に興味があって気象会社に勤めている一般社員です。</p>
+     </div>
+      <div class="">
+        <%# <%= image_tag("about/about_right.png",size: "100x100" ,class: "d-inline-block align-top m-3") %>  %>
+      </div>
+</body>
