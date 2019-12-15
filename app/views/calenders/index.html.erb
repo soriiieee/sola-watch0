@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+
+<body>
+<div class="container">
+
+<h1>Calenders</h1>
+
+<table>
+
+
+<tbody>
+<%# calender view %>
+<%= month_calendar events: @calenders do |date, calenders| %>
+  <%= date %>
+
+  <% calenders.each do |calender| %>
+    <div>
+      <%= calender.name %>
+    </div>
+  <% end %>
+<% end %>
+
+<%# defaut views %>
+    <% @calenders.each do |calender| %>
+      <tr>
+        <td><%= calender.name %></td>
+        <td><%= calender.start_time %></td>
+        <td><%= link_to 'Show', calender %></td>
+        <td><%= link_to 'Edit', edit_calender_path(calender) %></td>
+        <td><%= link_to 'Destroy', calender, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Calender', new_calender_path %>
+
+</div>
+</body>

@@ -1,3 +1,43 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.home_start {
+    background-image: url("/images/home/top.jpg");
+    height: 800px;
+    background-size: cover;
+    font-weight: 900;
+    margin-top:-70px;
+}
+
+.home_end{
+    background-image: url("/images/home/top2.jpg");
+    height: 800px;
+    background-size: cover;
+    font-weight: 900;
+}
+
+.lead{
+    border-color: white;
+}
+
+.contents{
+    font-size: 30px;
+}
+
+// background photo
+#sola-now{
+    height: 300px;
+    background-image: url("/images/home/sola-now.jpg");
+    background-size: cover;
+}
+
+#sola-data{
+    height: 300px;
+    background-image: url("/images/home/sola-Data.jpg");
+    background-size: cover;
+}
+#sola-gram{
+    height: 300px;
+    background-image: url("/images/home/sola-gram.jpg");
+    background-size: cover;
+}
