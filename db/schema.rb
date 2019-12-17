@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_15_072205) do
+ActiveRecord::Schema.define(version: 2019_12_17_000415) do
 
   create_table "arcives", force: :cascade do |t|
     t.string "name"
@@ -24,6 +24,28 @@ ActiveRecord::Schema.define(version: 2019_12_15_072205) do
     t.datetime "start_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo1"
+    t.string "photo2"
+    t.string "photo3"
+    t.string "photo4"
+    t.string "photo5"
+    t.string "photo6"
+    t.string "photo7"
+    t.string "photo8"
+    t.string "photo9"
+    t.string "photo10"
+    t.string "data1"
+    t.string "data2"
+    t.string "data3"
+    t.string "data4"
+    t.string "data5"
+    t.string "data6"
+    t.string "data7"
+    t.string "data8"
+    t.string "data9"
+    t.string "data10"
+    t.string "datetime"
+    t.string "nation"
   end
 
   create_table "satelights", force: :cascade do |t|
