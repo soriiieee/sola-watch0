@@ -26,6 +26,5 @@ class AddCalendersPhotoImages < ActiveRecord::Migration[5.2]
     add_column :calenders, :datetime, :string
     #nation
     add_column :calenders, :nation, :string
-
   end
 end
