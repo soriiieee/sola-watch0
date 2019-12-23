@@ -46,7 +46,7 @@ class NowsController < ApplicationController
         # @message="すでに取得済みの画像を表示します"
         display  =  Calender.last
         p display
-        redirect_to   '/nows'
+        redirect_to '/nows'
 
     end
 

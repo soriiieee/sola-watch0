@@ -5,7 +5,8 @@ class S3Upload
             :access_key_id => Rails.application.credentials.aws[:access_key_id],
             :secret_access_key => Rails.application.credentials.aws[:secret_access_key],
         )
-
+        # puts Rails.application.credentials.aws[:access_key_id]
+        puts "s3 client get"
         #upload photo-image
         png_names.each do |png|
             # p "tmp/#{png}"
