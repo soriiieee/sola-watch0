@@ -1,10 +1,20 @@
 class S3Upload
     def self.s3_upload(png_names)
-        s3 = Aws::S3::Client.new(
-            :region => 'ap-northeast-1',
-            :access_key_id => Rails.application.credentials.aws[:access_key_id],
-            :secret_access_key => Rails.application.credentials.aws[:secret_access_key],
-        )
+        if Rails.env.development?
+            s3 = Aws::S3::Client.new(
+                :region => 'ap-northeast-1',
+                :access_key_id => Rails.application.credentials.aws[:access_key_id],
+                :secret_access_key => Rails.application.credentials.aws[:secret_access_key],
+            )
+        # elsif Rails.env.test?
+        #     テスト環境のテキスト
+        elsif Rails.env.production?
+            s3 = Aws::S3::Client.new(
+                :region => 'ap-northeast-1',
+                :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+                :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
+            )
+        end
         # puts Rails.application.credentials.aws[:access_key_id]
         puts "s3 client get"
         #upload photo-image
