@@ -35,7 +35,7 @@ class NowsController < ApplicationController
         ttstr = Time.now.ago(1.hour).strftime("%Y%m%d%H00")
         # p ttstr
         # p png_names
-        # exit
+        exit
         Calender.create(
             name: ttstr,
             photo1: pngs_flgs[0][0],
