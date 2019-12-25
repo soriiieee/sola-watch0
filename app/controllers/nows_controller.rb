@@ -20,7 +20,7 @@ class NowsController < ApplicationController
         
         # latest images get 
         @display  =  Calender.last
-        @tt2 = @display.created_at.since(9.hour).strftime("%Y-%m-%d %H:%M")
+        # @tt2 = @display.created_at.since(9.hour).strftime("%Y-%m-%d %H:%M")
 
     end
 
@@ -36,13 +36,13 @@ class NowsController < ApplicationController
         # p ttstr
         # p png_names
         exit
-        Calender.create(
-            name: ttstr,
-            photo1: pngs_flgs[0][0],
-            photo2: pngs_flgs[0][1],
-            photo3: pngs_flgs[0][2],
-            photo4: pngs_flgs[0][3]
-        )
+        # Calender.create(
+        #     name: ttstr,
+        #     photo1: pngs_flgs[0][0],
+        #     photo2: pngs_flgs[0][1],
+        #     photo3: pngs_flgs[0][2],
+        #     photo4: pngs_flgs[0][3]
+        # )
         # @message="すでに取得済みの画像を表示します"
         display  =  Calender.last
         p display
