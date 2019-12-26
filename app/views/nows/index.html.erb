@@ -17,7 +17,7 @@
 
 <%# himawari image %>
 <h3 class="font-weight-bold text-center">satelight image</h3>
-<h3 class="font-weight-bold text-center">update(JST) <%= @tt1 %></h3>
+<h3 class="font-weight-bold text-center">update(JST) <%= @tt2 %></h3>
 <%# himawari image %>
 <div class="text-center">
   <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Infrared</a>
@@ -25,21 +25,24 @@
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Water vapor</button>
 </div>
 
-<div class="row">
-  <div class="col">
-    <div class="collapse multi-collapse" id="multiCollapseExample1">
-      <div class="card card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="collapse multi-collapse" id="multiCollapseExample2">
-      <div class="card card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-      </div>
-    </div>
-  </div>
+<%# infrared image %>
+<div id="cloud_image" class="container d-flex justify-content-center" style='width: 100%;'>
+        <div class="d-flex justify-content-center ">
+            <%# infraed %>
+            <img class="main" src="<%= @url_photo1 %>" style="width: 550px; height: 550px;">
+        </div>
+        <div class="d-flex justify-content-center ">
+            <%# infraed %>
+            <img class="main" src="<%= @url_photo2 %>" style="width: 550px; height: 550px;">
+        </div>
+        <div class="d-flex justify-content-center ">
+            <%# infraed %>
+            <img class="main" src="<%= @url_photo3 %>" style="width: 550px; height: 550px;">
+        </div>
+        <div class="d-flex justify-content-center ">
+            <%# infraed %>
+            <img class="main" src="<%= @url_photo4 %>" style="width: 550px; height: 550px;">
+        </div>
 </div>
     
 </body>

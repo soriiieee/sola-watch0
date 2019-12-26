@@ -19,8 +19,16 @@ class NowsController < ApplicationController
         # p @url "https://himawari8-dl.nict.go.jp/himawari8/img/D531106/1d/550/2019/12/19/140000_0_0.png"
         
         # latest images get 
-        @display  =  Calender.last
-        # @tt2 = @display.created_at.since(9.hour).strftime("%Y-%m-%d %H:%M")
+        display  =  Calender.last
+        @tt2 = display.created_at.since(9.hour).strftime("%Y-%m-%d %H:%M")
+
+        #
+        @url_photo1 ="https://satelights.s3-ap-northeast-1.amazonaws.com/#{display.photo1}"
+        @url_photo2 ="https://satelights.s3-ap-northeast-1.amazonaws.com/#{display.photo2}"
+        @url_photo3 ="https://satelights.s3-ap-northeast-1.amazonaws.com/#{display.photo3}"
+        @url_photo4 ="https://satelights.s3-ap-northeast-1.amazonaws.com/#{display.photo4}"
+
+        p @url_photo1
 
     end
 
@@ -45,7 +53,7 @@ class NowsController < ApplicationController
         )
         # @message="すでに取得済みの画像を表示します"
         display  =  Calender.last
-        p display
+        p display.created_at
         redirect_to '/nows'
 
     end
