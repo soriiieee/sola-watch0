@@ -34,11 +34,15 @@ class NowsController < ApplicationController
 
     def getimage
         ## satelight---file get up load------------
+        # datas = GetDatas.getimage()
+        pngs_flgs_data = GetDatas.getimage()
         pngs_flgs = GetSatelights.getimage()
+        # p pngs_flgs_data
+        # exit
         # p pngs_flgs[0]
         # exit
         # s3 upload(png)
-        S3Upload.s3_upload(pngs_flgs[0])
+        S3Upload.s3_upload(pngs_flgs[0],pngs_flgs_data[0])
 
         ttstr = Time.now.ago(1.hour).strftime("%Y%m%d%H00")
         # p ttstr
@@ -49,11 +53,21 @@ class NowsController < ApplicationController
             photo1: pngs_flgs[0][0],
             photo2: pngs_flgs[0][1],
             photo3: pngs_flgs[0][2],
-            photo4: pngs_flgs[0][3]
+            photo4: pngs_flgs[0][3],
+            data1: pngs_flgs_data[0][0]+".png",
+            data2: pngs_flgs_data[0][1]+".png",
+            data3: pngs_flgs_data[0][2]+".png",
+            data4: pngs_flgs_data[0][3]+".png",
+            data5: pngs_flgs_data[0][4]+".png",
+            data6: pngs_flgs_data[0][5]+".png",
+            data7: pngs_flgs_data[0][6]+".png",
+            data8: pngs_flgs_data[0][7]+".png",
+            data9: pngs_flgs_data[0][8]+".png"
         )
         # @message="すでに取得済みの画像を表示します"
         display  =  Calender.last
         p display.created_at
+        p display
         redirect_to '/nows'
 
     end

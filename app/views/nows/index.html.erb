@@ -9,9 +9,9 @@
 <div id="cloud_image" class="container d-flex justify-content-center" style='width: 100%; height: 700px;'>
         <div class="himawari-image d-flex justify-content-center ">
             <%# 衛星画像 %>
-            <img class="main" src="<%= @url %>" style="width: 550px; height: 550px; position: absolute; z-index: 1;">
+            <img class="main" src="<%= @url %>" style="width: 650px; height: 650px; position: absolute; z-index: 1;">
             <%# #マスキング %>
-            <img class="coastline" src="https://himawari8-dl.nict.go.jp/himawari8/img/D531106/1d/550/coastline/ffff00_0_0.png" style="width: 550px; height: 550px; position: absolute; z-index: 2;">
+            <img class="coastline" src="https://himawari8-dl.nict.go.jp/himawari8/img/D531106/1d/550/coastline/ffff00_0_0.png" style="width: 650px; height: 650px; position: absolute; z-index: 2;">
         </div>
 </div>
 
@@ -26,7 +26,7 @@
 </div>
 
 <%# infrared image %>
-<div id="cloud_image" class="container d-flex justify-content-center" style='width: 100%;'>
+<div id="cloud_image" class="" style='width: 100%;'>
         <div class="d-flex justify-content-center ">
             <%# infraed %>
             <img class="main" src="<%= @url_photo1 %>" style="width: 550px; height: 550px;">

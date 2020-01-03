@@ -3,7 +3,7 @@ require "url_check"
 
 class GetSatelights
     def self.getimage()
-        FileUtils.rm(Dir.glob('tmp/*.png'))
+        # FileUtils.rm(Dir.glob('tmp/*.png'))
         tt1 = Time.now.ago(1.hour)
         tt2 = tt1.ago(9.hour)
 
