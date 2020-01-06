@@ -45,11 +45,13 @@ class NowsController < ApplicationController
         S3Upload.s3_upload(pngs_flgs[0],pngs_flgs_data[0])
 
         ttstr = Time.now.ago(1.hour).strftime("%Y%m%d%H00")
+        stime = Time.now
         # p ttstr
         # p png_names
         # exit
         Calender.create(
             name: ttstr,
+            start_time: stime,
             photo1: pngs_flgs[0][0],
             photo2: pngs_flgs[0][1],
             photo3: pngs_flgs[0][2],

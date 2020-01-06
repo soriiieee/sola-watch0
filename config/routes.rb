@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'solagram/index'
+  get 'solagram/show'
   root to: 'home#index'
   
   #sola-nows
@@ -9,6 +11,10 @@ Rails.application.routes.draw do
   #sola-data
   get 'data',to: 'data#index'
   get 'data/show'
+
+    #sola-data
+    get 'solagram',to: 'solagram#index'
+    get 'solagram/show'
 
   #sola-calender
   resources :calenders

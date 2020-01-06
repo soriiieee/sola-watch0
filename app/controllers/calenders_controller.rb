@@ -5,6 +5,8 @@ class CalendersController < ApplicationController
   # GET /calenders.json
   def index
     @calenders = Calender.all
+    @path = "https://satelights.s3-ap-northeast-1.amazonaws.com"
+    p @calenders
   end
 
   # GET /calenders/1

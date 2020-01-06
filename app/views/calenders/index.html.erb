@@ -4,34 +4,34 @@
 <body>
 <div class="container">
 
-<h1>Calenders</h1>
+<%# 　紹介文　 %>
+<div class="container d-flex　align-items-center">
+  <h3 class="font-weight-bold text-left"><span class="title">Arcive</span></h3>
+  <h3>weather data save SLIDE-SHOW</h3>
+  <%# <h3 class="font-weight-bold text-center"><%= @datas.created_at%>
+</div>
 
 <table>
 
 
 <tbody>
 <%# calender view %>
-<%= month_calendar events: @calenders do |date, calenders| %>
-  <%= date %>
+  <%= month_calendar events: @calenders do |date, calenders| %>
+    <%= date %>
+    <%# <%= calenders %>
 
-  <% calenders.each do |calender| %>
-    <div>
-      <%= calender.name %>
-    </div>
+    <% calenders.each do |calender| %>
+      <div>
+        <%= image_tag "#{@path}/#{calender.photo1}", :size =>'200x200'%>
+        <%# <p><%= "#{@path}/#{calender.photo1}"%>
+        <%# <%= calender.photo1 %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
 
 <%# defaut views %>
-    <% @calenders.each do |calender| %>
-      <tr>
-        <td><%= calender.name %></td>
-        <td><%= calender.start_time %></td>
-        <td><%= link_to 'Show', calender %></td>
-        <td><%= link_to 'Edit', edit_calender_path(calender) %></td>
-        <td><%= link_to 'Destroy', calender, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+    <%#<% @calenders.each do |calender| %>
+</tbody>
 </table>
 
 <br>

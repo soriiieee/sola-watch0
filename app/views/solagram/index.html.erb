@@ -1,0 +1,47 @@
+<html>
+<body>
+
+
+<div class="container">
+<%# 　紹介文　 %>
+<div class="container d-flex　align-items-center">
+  <h3 class="font-weight-bold text-left"><span class="title">sola-gram</span></h3>
+  <h3>Sky and clouds</h3>
+  <%# <h3 class="font-weight-bold text-center"><%= @datas.created_at%>
+</div>
+<!-- SnapWidget -->
+	<iframe src="https://snapwidget.com/embed/776639" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; ">
+	</iframe>
+
+</div>
+
+
+<!-- SnapWidget -->
+<script src="https://snapwidget.com/js/snapwidget.js"></script>
+<!-- SnapWidget -->
+
+<%# <div id="instafeed"></div>
+<script>
+$(function(){
+	$.ajax({
+		type: 'GET',
+		url: 'https://graph.facebook.com/v3.0/462006568068433?fields=name%2Cmedia.limit(2)%7Bcaption%2Clike_count%2Cmedia_url%2Cpermalink%2Ctimestamp%2Cusername%7D&access_token=EAAIW8ZBlhMv4BAK4ZBkjHg3HSi2VpakNCbHEURu1fJuJnAcnNsPIOuIdGdpZBEBhPCHEmseyBKEE9oQ1mpsMIy01vkCZBh8rvQPQBwIP2RwnkumJoHlLd0c0RFEKuUtp1jg4fJtn4CcAZCAWnaVJlXa4xIRKxtHZClo3uvGrEmfgZDZD',
+		dataType: 'json',
+		success: function(json) {
+		    	
+		    var html = '';
+		    var insta = json.media.data;
+		    for (var i = 0; i < insta.length; i++) {
+		    	html += '<div ><a href="' + insta[i].permalink + '" target="_blank"><img src="' + insta[i].media_url + '"></a></div>';
+		    }
+		      $("#instafeed").append(html);			
+		},
+		error: function() {
+ 
+		//エラー時の処理
+		}
+	});
+});	
+</script> %>
+</body>
+</html>
