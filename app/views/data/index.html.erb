@@ -16,17 +16,25 @@
           <p class="text-danger"><%= @datas.created_at%>update</p>
         </div>
         <div class="row">
+            <%# ------------------------------ sub images ------------------------------  %>
             <div class="col-2">
               <a href="/data/show"><div class="weather_icon"><%= image_tag "height/#{@height_icon[idx]}", class: "border w-100", id: "h_200hpa"%></div></a>
               <a href="#300hpa_block"><div class="mt-3 text-center"><i class="fas fa-arrow-up"></i></div></a>
             </div>
-            <div class="col-8">
-              <div class="mb-5 text-center data-image"><%= image_tag @path+"/"+@data_name[idx], class: "border w-100", id: "h_200hpa"%></div>
+            <%# ------------------------------ main images ------------------------------  %>
+            <div class="col-8 data-img">
+            <%# dataimege ---> awas %>
+               <div class="mb-5 text-center data-image">
+                <%= image_tag @path+"/"+@data_name[idx], class: "border w-100", style: "position: relative; z-index: 1;" %>
+                <%= image_tag @path_assets+"/"+@overlays[idx], class: "border w-100", style: "position: absolute; top: 0;
+    left: 0; z-index: 2;" %>
+               </div>
             </div>
+            <%# ------------------------------ sub images ------------------------------  %>
             <div class="col-2">
               <a href="/data/show/200"><div class="weather_icon"><%= image_tag "height/#{@height_icon[idx]}", class: "border w-100", id: "h_200hpa"%></div></a>
               <a href="#300hpa_block"><div class="mt-3 text-center"><i class="fas fa-arrow-up"></i></div></a>
             </div>
         </div> <%# row %>
   <% end %>
-</div>  
+</div> 
